@@ -17,6 +17,29 @@ let fifteen = [];
 let fifth = [];
 let third = [];
 
+
+// for (i of numList) {
+//   if (i %15 === 0) {
+//     fifteen.push(i);
+//   } else if (i %5 === 0) {
+//     fifth.push(i);
+//   } else if (i %3 === 0){
+//     third.push(i);
+//   };
+// };
+for (i of numList) {
+  if (i %3 === 0) {
+    third.push(i);
+  } else if (i %5 === 0) {
+    fifth.push(i);
+  } else if (i %15 === 0){
+    fifteen.push(i);
+  };
+};
+
+
+
+
 console.log(fifteen);
 console.log(fifth);
 console.log(third);
