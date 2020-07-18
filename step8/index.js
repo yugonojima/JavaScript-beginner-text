@@ -33,3 +33,29 @@ class Human {
 }
 
 // class Hiro
+class Hiro extends Human {
+  constructor(seiken,age,name) {
+    super (age,name);
+    this.seiken = seiken;
+  }
+
+
+  get seiken () {
+     return "" + this._seiken + "です";
+  };
+
+  set seiken (value) {
+    this._seiken = value
+  }
+
+  getSeiken() {
+    return this.seiken;
+  }
+
+  
+}
+var mmm = new Hiro('エクスカリバー','17','yugo');
+
+
+
+console.log(mmm.getSeiken());

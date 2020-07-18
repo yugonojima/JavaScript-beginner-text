@@ -2,12 +2,28 @@
 const n = 17;
 function EvenOrOdd(n) {
   // TODO: 偶数奇数判定関数を作成する
+  if (n %2 === 0) {
+    return 'even';
+  } else {
+    return 'odd';
+  }
+
 }
 
+console.log(EvenOrOdd(n));
+
 // 17は素数か素数でないか
-function is_prime(n) {
-  // TODO: 素数判定関数を作成する
-}
+// function is_prime(n) {
+//   // TODO: 素数判定関数を作成する
+//   for (let i = 2; i < n; i++) {
+//     if (n %i === 0) {
+//       return false
+//     } else {
+//       return true
+//     }
+//   }
+// }
+
 
 
 
@@ -18,3 +34,17 @@ function is_prime(n) {
 // const EvenOrOdd = (n) => {}
 // という形で書くことができる
 // 今後よくみる形になるのでここで覚えておく
+
+const is_prime = (n) => {
+  for (let i = 2; i < n; i++) {
+    if (n %i === 0) {
+      return false
+    } else {
+      return true
+    }
+  };
+} 
+
+
+
+console.log(is_prime(n)?'素数':'素数じゃない');
