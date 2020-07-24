@@ -3,10 +3,30 @@
 // クリックすると1カウントが1進むようにする
 // ヒント: 文字列の数字を足し算することはできないので一度数値型に変える必要がある
 
+
 const root = document.getElementById("root");
 const count = document.getElementById("count");
 
-const handleClick = () => {};
+
+function createButton() {
+  const newButton = document.createElement("button");
+  newButton.setAttribute("id","button");
+  const button = document.getElementById("button");
+  root.insertBefore(newButton,count);
+
+};
+
+createButton();
+
+let i = 0;
+
+
+
+
+button.addEventListener('click' ,() =>  {
+  i++;
+  count.textContent = i;
+});
 
 // TODO: 表示されている数字の上にボタンを追加したいときはどうするのかを調べる
 // ヒント
